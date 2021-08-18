@@ -25,6 +25,7 @@
       <module>cloud-consumer-order80-openfeign-hystrix</module>
       <module>cloud-monitor-hystrix-dashboard9001</module>
     <module>cloud-gateway9527</module>
+      <module>cloud-config-center-3344</module>
   </modules>
   <packaging>pom</packaging>
 
