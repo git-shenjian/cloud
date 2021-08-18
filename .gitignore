@@ -1,0 +1,17 @@
+# 项目排除路径
+/cloud-api-commons/target/
+/cloud-consumer-order80-consul/target/
+/cloud-consumer-order80-eureka/target/
+/cloud-consumer-order80-openfeign/target/
+/cloud-consumer-order80-openfeign-hystrix/target/
+/cloud-consumer-order80-zk/target/
+/cloud-eureka-server7001/target/
+/cloud-eureka-server7002/target/
+/cloud-eureka-server7003/target/
+/cloud-gateway9527/target/
+/cloud-monitor-hystrix-dashboard9001/target/
+/cloud-provider-payment8001-eureka/target/
+/cloud-provider-payment8001-hystrix/target/
+/cloud-provider-payment8002-eureka/target/
+/cloud-provider-payment8004-zk/target/
+/cloud-provider-payment8006-consul/target/

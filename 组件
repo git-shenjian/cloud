@@ -1,0 +1,4 @@
+1、注册中心:euraka\zookepper\consul
+2、服务调用:ribbon\openfegin
+3、服务降级熔断:hystrix
+4、网关:gateway

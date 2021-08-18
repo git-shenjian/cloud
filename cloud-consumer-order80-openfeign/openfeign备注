@@ -1,0 +1,37 @@
+一、如何使用Openfeign？
+1、添加依赖，openfeign本身也引用了ribbon，所有具有ribbon负载均衡的能力
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+2、在主启动类上使用@EnableFeignClients ,表示开启Openfeign
+3、编写一个接口，使用@FeignClient(value="注册在eureka上的微服务名称")
+
+二、Openfeign超时设置
+1、Openfeign默认等待1s钟,超过后报错
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)(单位：毫秒)
+ribbon:
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间,5s
+  ReadTimeout: 5000
+  #指的是建立连接后从服务器读取到可用资源所用的时间,5s
+  ConnectTimeout: 5000
+
+三、OpenFeign日志增强
+日志打印功能
+Feign提供了日志打印功能，我们可以通过配置来调整日恙级别，从而了解Feign 中 Http请求的细节。
+说白了就是对Feign接口的调用情况进行监控和输出
+日志级别
+    NONE：默认的，不显示任何日志;
+    BASIC：仅记录请求方法、URL、响应状态码及执行时间;
+    HEADERS：除了BASIC中定义的信息之外，还有请求和响应的头信息;
+    FULL：除了HEADERS中定义的信息之外，还有请求和响应的正文及元数据。
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    cn.sj.service.PayMentService: debug
+
+四、如果openfeign需要和hystrix一起使用，需要开启支持，默认是不支持
+feign:
+  hystrix:
+    #开启feign的hystrix支持,默认是false
+    enabled: true
