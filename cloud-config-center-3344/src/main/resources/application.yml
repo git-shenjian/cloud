@@ -8,15 +8,22 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:git-shenjian/springcloud-config.git #GitHub上面的git仓库名字
+          uri: https://github.com/git-shenjian/springcloud-config.git #GitHub上面的git仓库名字
           ####搜索目录
           search-paths:
             - springcloud-config
-      ####读取分支
-      label: master
+          username: git-shenjian
+          password: shenjian520zhl
+      ####分支
+      label: git-shenjian-patch-1
+  #http://localhost:3344/git-shenjian-patch-1/config2-test.yml测试地址
 
 #服务注册到eureka地址
 eureka:
-  client:
+  instance:
+    hostname: cloud-config-center
+  client: #服务提供者provider注册进eureka服务列表内
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://eureka7001.com:7001/eureka

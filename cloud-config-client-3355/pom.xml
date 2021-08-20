@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-config-center-3344</artifactId>
+    <artifactId>cloud-config-client-3355</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,26 +17,16 @@
     </properties>
 
     <dependencies>
-        <!--添加消息总线RabbitMQ支持-->
-        <!--<dependency>
+        <!--SpringCloud 2020.* 版本把bootstrap禁用了，导致在读取文件的时候读取不到而报错，所以我们只要把bootstrap.yml从新导入进来就会生效了-->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-            <version>2.2.1.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-bus</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.0.2</version>
         </dependency>
+        <!--config配置中心客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-bus</artifactId>
-            <version>2.2.1.RELEASE</version>
-        </dependency>-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
