@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: sj
  * @createDate: 2021/8/20 13:11
  */
+@RefreshScope
 @RestController
 public class ConfigController {
 
@@ -26,6 +27,6 @@ public class ConfigController {
 
     @RequestMapping("/getinfo")
     private String getinfo(){
-        return configinfo+"1111111";
+        return configinfo;
     }
 }
