@@ -15,8 +15,8 @@ spring:
           username: git-shenjian
           password: shenjian520zhl
       ####分支
-      label: git-shenjian-patch-1
-  #http://localhost:3344/git-shenjian-patch-1/config2-test.yml测试地址
+      label: master
+  #http://localhost:3344/master/config-test.yml测试地址
 
 #服务注册到eureka地址
 eureka:

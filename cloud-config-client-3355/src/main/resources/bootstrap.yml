@@ -7,8 +7,8 @@ spring:
   cloud:
     #Config客户端配置
     config:
-      label: git-shenjian-patch-1 #分支名称
-      name: config2 #配置文件名称
+      label: master #分支名称
+      name: config #配置文件名称
       profile: test #读取后缀名称   上述3个综合：master分支上config-dev.yml的配置文件被读取http://config-3344.com:3344/two/config-dev.yml
       uri: http://localhost:3344/ #配置中心地址k
 

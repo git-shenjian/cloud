@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @createDate: 2021/8/20 13:11
  */
 @RestController
-@RefreshScope
 public class ConfigController {
 
     @Value("${config.info}")
